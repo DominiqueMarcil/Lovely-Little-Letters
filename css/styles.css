@@ -225,3 +225,29 @@ body {
     box-shadow: 0 0.5vmin 0.5vmin rgba(0, 0, 0, 0.2);
     transition: 0.2s;
 }
+
+
+@keyframes open {
+    100% {
+      transform: rotateX(180deg);
+    }
+  }
+  
+  .animate-lid {
+    animation: open 0.5s forwards;
+  }
+  
+ /* Reverse Lid Animation */
+@keyframes close-rev {
+    from {
+        transform: rotateX(-180deg);
+    }
+}
+
+/* Reverse Card Animation */
+@keyframes downslide-rev {
+    from {
+        transform: translateY(-15vmin);
+    }
+}
+  
