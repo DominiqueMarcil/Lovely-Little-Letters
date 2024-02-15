@@ -7,10 +7,23 @@ h1 {
     font-family: Solitreo;
 }
 
+
+    h2 {
+        font-family: Solitreo;
+        color: white;   
+        font-size: 78px; /* Use font-size instead of size */
+        text-align: center;
+        position: absolute; /* Position the text absolutely */
+        top: 20vmin; /* Adjust this value as needed */
+        left: 50%; /* Center the text horizontally */
+        transform: translate(-50%, -50%); /* Center the text */
+        z-index: 1; /* Make sure the text is above other elements */
+    }
+
 body {
     height: 100vh;
     width: 100vw;
-    background: #690b22;
+    background: #002b2a;
     font-family: "Pangolin", cursive;
     font-size: 1vmin;
     display: flex;
@@ -56,15 +69,15 @@ body {
 
 .envelope {
     position: relative;
-    background: #bd5a74;
+    background: #012724;
     height: 30vmin;
     width: 47.9vmin;
 }
 
 .card {
     position: absolute;
-    background: rgb(240, 240, 238);
-    height: 25vmin;
+    background: rgb(211, 211, 211);
+    height: 28vmin;
     width: 43vmin;
     display: flex;
     flex-direction: column;
@@ -77,14 +90,14 @@ body {
 
 .message {
     position: absolute;
-    top: 5vmin;
+    top: 0.5vmin;
 }
 
 .cover {
     position: absolute;
     height: 0;
     width: 0;
-    border-bottom: 15vmin solid #d15777;
+    border-bottom: 15vmin solid #004d47;
     border-left: 24vmin solid transparent;
     border-right: 24vmin solid transparent;
     top: 15vmin;
@@ -95,7 +108,7 @@ body {
     /*left triangle*/
     position: absolute;
     content: "";
-    border-left: 24.5vmin solid #fcbbcc;
+    border-left: 24.5vmin solid #00A68A;
     border-bottom: 15vmin solid transparent;
     border-top: 15vmin solid transparent;
     top: -15vmin;
@@ -105,7 +118,7 @@ body {
 .cover::before {
     position: absolute;
     content: "";
-    border-right: 24.5vmin solid #fcbbcc;
+    border-right: 24.5vmin solid #00A68A;
     border-bottom: 15vmin solid transparent;
     border-top: 15vmin solid transparent;
     top: -15vmin;
@@ -116,7 +129,7 @@ body {
     position: absolute;
     height: 0;
     width: 0;
-    border-top: 15vmin solid #d15777;
+    border-top: 15vmin solid #004d47;
     border-left: 24vmin solid transparent;
     border-right: 24vmin solid transparent;
     top: 0;
@@ -142,7 +155,7 @@ body {
     opacity: 0.7;
     height: 2vmin;
     width: 48vmin;
-    background: #3d0316;
+    background: #011311;
 }
 
 /* Heart Animation */
@@ -180,7 +193,7 @@ body {
 /* Custom Card Animation */
 @keyframes slide {
     100% {
-        transform: translateY(-15vmin);
+        transform: translateY(-20vmin);
         z-index: 2;
     }
 }
@@ -210,7 +223,7 @@ body {
 
 .button {
     position: relative;
-    background: #bd5a74;
+    background: #01705e;
     height: 5vmin;
     width: 15vmin;
     border-radius: 5vmin;
@@ -222,8 +235,9 @@ body {
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
-    box-shadow: 0 0.5vmin 0.5vmin rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5vmin 0.5vmin rgba(5, 55, 95, 0.2);
     transition: 0.2s;
+    text-decoration: none;
 }
 
 
@@ -237,17 +251,16 @@ body {
     animation: open 0.5s forwards;
   }
   
- /* Reverse Lid Animation */
-@keyframes close-rev {
+/* Reverse Lid Animation */
+@keyframes open-rev {
     from {
         transform: rotateX(-180deg);
     }
 }
 
 /* Reverse Card Animation */
-@keyframes downslide-rev {
+@keyframes slide-rev {
     from {
         transform: translateY(-15vmin);
     }
 }
-  
